@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+*{margin:0; padding:0;}
+li {list-style: none;}
+a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+fieldset {border:0;}
+
+legend {
+    position:absolute;
+    left:-99999px;
+}
+
+#form {
+    width: 375px;
+    height: 812px;
+    background-color: #F5F6F7;
+    border: 1px solid #333;
+    margin: 50px auto;
+    padding: 10px;
+}
+
+#form h2 {
+    font-size: 50px;
+    text-align: center;
+    padding: 50px;
+    color: #EF4545
+}
+
+#form fieldset > div::after {
+    content:'';
+    display: block;
+    clear: both;
+}
+
+#form fieldset > div > label {
+    width:100px;
+    font-weight: bold;
+    font-size: 13px;
+    background-color: #fff;
+    text-align: right;
+    /* display: inline-block; */
+    padding: 0 10px;
+    box-sizing: border-box;
+    float:left;
+    line-height: 32px;
+    margin-right: 5px;
+
+}
+
+input[type="text"], input[type="password"] {
+    width: 170px;
+    height: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+}
+
+::placeholder {
+    font-size: 12px;
+    color: #ddd;
+}
+
+input[type="button"]{
+    width:90px;
+    height: 30px;
+    border: 1px solid #333;
+    background-color: #fff;
+    color:#EF4545;
+    
+}
+
+.buttom {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button input[type="submit"] {
+    width: 370px;
+    height: 40px;
+    border: 1px solid #333;
+    background-color: #EF4545;
+    color: #fff;
+    margin: 100px auto;
+}
+
+input[type="radio"] + span {
+    line-height: 32px;
+}

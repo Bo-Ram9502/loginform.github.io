@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+*{margin:0; padding:0;}
+li {list-style: none;}
+a {
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+fieldset{
+    border:0;
+}
+
+legend {
+    position: absolute;
+    left: -99999px;
+}
+
+#form {
+    width: 600px;
+    border: 1px solid #333;
+    margin: 50px auto;
+    padding: 50px;
+}
+
+
+/* >: 자식 선택 */
+#form fieldset > div::after {
+    content:'';
+    display: block;
+    clear: both;
+}
+
+#form fieldset > div > label {      /* 첫번쩨 자식에게 해당하는것: >  첫번째가 자식 그아래는 자손*/
+    width: 150px;
+    font-weight: bold;
+    /* background-color: olive; */
+    text-align: right;
+    /* display: inline-block; */    /* label은 인라인 요소 */ /* 블록요소를 합칠수있는 디스플레이 인라인 블록으로 해서 가로정렬 */
+    float: left;  /* 딱봐로 떨어지게 가로정렬원한다면 플룻 클리어 보스 해야함 적당히 가로정렬 한다면 요소의 간격이 있음 디스플레이 인라인블록  */
+    line-height: 32px;
+    margin-right: 10px;
+}
+
+input[type="text"],input[type="password"] {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 5px;
+    border: 1px solid #000;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+::placeholder {   /* ::는 모든 플래이스홀더를 선택하는것  단독 플래이스 홀더를 원한다면 => input[type="text"]::placeholder */
+    font-size: 14px;
+    color: #ddd;
+}
+
+input[type="button"] {
+    width: 300px;
+    height: 30px;
+    background-color:red;
+    color: #fff;
+    border: 1px solid #000;
+    margin-bottom: 5px;
+}
+
+
+.address input[type="text"] {
+    margin-left: 160px;
+}
+
+
+.drank div {
+    display: inline-block;   /* 적용하면 요소 간 간격이 있음 가로정렬*/
+    line-height:32px;
+}
+
+
+.textarea {
+    resize: none;
+    width: 300px;
+}
+
+
+select {
+    height: 40px;
+    width: 200px;
+}
+
+.button {
+    text-align: center;  /* 인풋이 인라인요소 이기 때문에 부모에게 적용하기 */
+    margin-top: 40px;
+}
+
+
+.button input[type="reset"] {
+    width: 120px;
+    height: 40px;
+    border: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+}
+
+.button input[type="submit"] {
+    width: 120px;
+    height: 40px;
+    border: 1px solid #000;
+    background-color: blue;
+    color: #fff
+}
+
+/* #form span {
+    line-height: 32px;
+} */
+/* + 바로 뒤에 있는 형제선택자 */
+input[type="radio"] + span {
+    line-height: 32px;
+}

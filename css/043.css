@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+*{margin:0; padding:0;}
+li {list-style: none;}
+a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.main_visual {
+    height: 700px;
+    background: url('../img/무료이미지\ 바다.jpg') center center / cover no-repeat;
+    position: relative;
+}
+
+
+.main_visual::before {
+    content:'';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    /* display: block; */
+    position: absolute;
+    left:0;
+    top:0;
+    /* 검은색필터 사용하고 싶을땐 디스플레이 블럭 또는 포지션 엡솔루트 사용 */
+}
+
+
+.main_visual div {
+    /* background-color: rgba(0, 0, 0, .5); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%)  /* 트렌스 폼은 변형 여러가지 많음. 엑스축, 와이축*/
+}     /* 포지션부터 트렌스폼은 거의 공식처럼 외우기. 두가지 글의 가운데 수직정렬 */
+
+
+.main_visual h2 {
+    font-size: 50px;
+    letter-spacing: 30px;
+}
+
+
+.main_visual p {
+    width: 300px;
+    height: 60px;
+    background-color: olive;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin: 0 auto;
+}
