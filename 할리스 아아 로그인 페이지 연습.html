@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 할리스 로그인 페이지 연습</title>
+    <style>
+        *{margin:0; padding:0;}
+        li {list-style: none;}
+        a {
+            text-decoration: none;
+            display:block;
+            color: #333;
+        }
+
+
+        body {background-color: #EDDCCA;}
+
+        legend {
+            position: absolute;
+            left: -99999px;
+        }
+
+        fieldset {border: 0;}
+
+        .wrap {
+            width: 1600px;
+            height: 800px;
+            background-color:#FFEDD9;
+            margin: 0 auto;
+            margin-top: 50px ;
+            box-shadow: -40px 60px 100px 10px #333;
+        }
+
+
+        .wrap h2 {
+            text-align: left;
+            font-size: 60px;
+            font-weight: bold;
+            padding: 100px;
+            color: #5C1B14
+        }
+
+        .wrap label {
+            position: absolute;
+            left: -99999px;
+        }
+
+        
+        input[type="text"], [type="password"] {
+            width:400px;
+            height:40px;
+            border: 1px solid #333;
+            border-radius: 20px;
+            margin: 10px 100px;
+            padding: 0 10px;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            border: 1px solid transparent;
+            outline: 1px solid #DF6565;
+        }
+
+
+        button {
+            border: 1px solid #333;
+            border-radius: 20px;
+            width: 150px;
+            height: 40px;
+            background-color: #FEC689;
+            font-size: 12px;
+            color: #DF6565;
+            margin: 5px;
+            margin-left: 100px;
+        }
+
+        .text {
+            font-size: 12px;
+            color:#BFB2B2;
+            margin: 30px 100px;
+        }
+
+        .text p {
+            display: inline-block;
+        }
+
+
+
+        div::after {
+            content:'';
+            display: block;
+            clear: both;
+        }
+
+        .img {
+            width: 600px;
+            height: 600px;
+            border: 2px solid #333;
+            overflow: hidden;
+            border-radius: 50%;
+            float: left;
+            margin-top: -550px;
+            margin-left: 900px;
+        }
+
+        .img img {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <form action ="" met="post">
+            <h2>Your Day Starts With<br  />Our Coffee</h2>
+
+            <fieldset>
+
+                <legend>할리스 로그인 페이지</legend>
+
+                <div>
+                    <label for="id">아이디</label>
+                    <input type="text" id="id" placeholder="아이디">
+                </div>
+
+                <div>
+                    <label for="pass">비밀번호</label>
+                    <input type="password" id="pass" placeholder="비밀번호">
+                </div>
+
+            </fieldset>
+
+            <button>Login</button>
+            <button>Sign Up</button><br  />
+
+            <button>카카오톡 로그인</button>
+            <button>페이스북 로그인</button>
+
+            <div class="text">
+                <p>아이디 찾기</p>
+                <p>비밀번호 찾기</p>
+            </div>
+
+            <div class="img">
+                <img src="img/구글 커피 이미지.jpg"  />
+            </div>
+        </form>
+    </div>
+</body>
+</html>
